@@ -1,0 +1,23 @@
+{
+  "name": "l16",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^5.0.9",
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.3"
+  }
+}
