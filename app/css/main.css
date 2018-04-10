@@ -1,0 +1,62 @@
+nav {
+  width: 100%;
+  padding-top: 60px;
+  position: fixed;
+  background-color: #fcdb00;
+  z-index: 100; }
+  nav .container .row div[class^='col'] .linkItem {
+    padding: 15px 0;
+    text-align: center; }
+    nav .container .row div[class^='col'] .linkItem a {
+      font-size: 22px;
+      color: #000;
+      font-weight: bold;
+      transition: all .5s; }
+      nav .container .row div[class^='col'] .linkItem a:hover {
+        cursor: pointer;
+        font-size: 25px;
+        text-decoration: none; }
+  nav .container .row .col-1 .linkItem {
+    text-align: right; }
+
+#main {
+  padding-top: 165px;
+  padding-bottom: 107px;
+  background-color: #fcdb00;
+  width: 100%; }
+  #main .container .row .col-5 .contentWrap {
+    padding-top: 75px; }
+    #main .container .row .col-5 .contentWrap h1 {
+      font-size: 32px;
+      margin-bottom: 22px; }
+    #main .container .row .col-5 .contentWrap h3 {
+      font-size: 20px;
+      margin-bottom: 22px; }
+    #main .container .row .col-5 .contentWrap p {
+      font-size: 16px;
+      margin-bottom: 29px; }
+    #main .container .row .col-5 .contentWrap button {
+      text-align: center;
+      padding: 18px 28px;
+      background-color: transparent;
+      border-radius: 10px;
+      color: #000;
+      border: 2px black solid;
+      outline: none;
+      text-transform: uppercase; }
+      #main .container .row .col-5 .contentWrap button i {
+        margin-left: 25px; }
+  #main .container .row .col-5 .imgWrap {
+    text-align: center; }
+
+#features {
+  padding-top: 118px;
+  padding-bottom: 164px; }
+  #features .container .row .headWrap {
+    text-align: center; }
+    #features .container .row .headWrap h2 {
+      font-size: 32px; }
+    #features .container .row .headWrap p {
+      font-size: 20px; }
+  #features .container .row div[class^="col"] .iconWrap, #features .container .row div[class^="col"] .textWrap {
+    margin: 50px 0; }
