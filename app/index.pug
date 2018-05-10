@@ -1,93 +1,153 @@
+include blocks/header.pug
+
 <!DOCTYPE html>
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Project
-	link(rel="stylesheet", href="libs/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css")
-	link(rel="stylesheet", href="libs/bootstrap/dist/css/bootstrap.min.css")
-	link(rel="stylesheet", href="css/main.css")
-body
-	div#wrapper
-		#content
-			nav
-				.container
-					.row
-						.col-3
-							.logo
-								img(src="img/logo.png", alt="logo")
-						.col-2.offset-4
-							.linkItem
-								a(href="##") Features
-						.col-2
-							.linkItem
-								a(href="##") Support
-						.col-1
-							.linkItem
-								a(href="##") Blog
-			section#main
-				.container
-					.row
-						.col-5
-							.contentWrap
-								h1 Inspire your inspiration
-								h3 Simple to use for your app, products showcase and your inspiration
-								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
-								button.button-empty Download
-									i.fas.fa-cloud-download-alt
-						.col-5.offset-2
-							.imgWrap
-								img(src="img/ipad.png", alt="ipad")
-			section#features
-				.container
-					.row
-						.col-11.offset-1
-							.headWrap
-								h2 Tiny features
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates fugiat exercitationem adipisci magni non omnis illum quam praesentium cupiditate totam!
-					.row
-						.col-12
-							hr
-					.row
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, a.
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, magni!
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, modi.
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, quasi!
-						.col-1
-							.iconWrap
-								img(src="img/1.png", alt="")
-						.col-3
-							.textWrap
-								h4 Header
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laboriosam!
-		footer
+	head
+		+head
+	body
+		div#wrapper
+			#content
+				nav
+					.container
+						.row
+							.col-xl-3
+								.logo
+									img(src="img/logo.png", alt="logo")
+							.col-xl-2.offset-xl-4
+								.linkItem
+									a(href="##") Features
+							.col-xl-2
+								.linkItem
+									a(href="##") Support
+							.col-xl-1
+								.linkItem
+									a(href="##") Blog
+				section#main
+					.container
+						.owl-carousel.owl-theme
+							.item
+								.row
+									.col-xl-5
+										.contentWrap
+											h1 Inspire your inspiration
+											h3 Simple to use for your app, products showcase and your inspiration
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+											button.button-empty Download
+												i.fas.fa-cloud-download-alt
+									.col-xl-5.offset-xl-2
+										.imgWrap
+											img(src="img/ipad.png", alt="ipad")
+							.item
+								.row
+									.col-xl-5
+										.contentWrap
+											h1 Inspire your inspiration
+											h3 Simple to use for your app, products showcase and your inspiration
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+											button.button-empty Download
+												i.fas.fa-cloud-download-alt
+									.col-xl-5.offset-xl-2
+										.imgWrap
+											img(src="img/ipad.png", alt="ipad")
+							.item
+								.row
+									.col-xl-5
+										.contentWrap
+											h1 Inspire your inspiration
+											h3 Simple to use for your app, products showcase and your inspiration
+											p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+											button.button-empty Download
+												i.fas.fa-cloud-download-alt
+									.col-xl-5.offset-xl-2
+										.imgWrap
+											img(src="img/ipad.png", alt="ipad")
+				section#features
+					.container
+						.row
+							.col-xl-11.offset-xl-1
+								.headWrap
+									h2 Tiny features
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates fugiat exercitationem adipisci magni non omnis illum quam praesentium cupiditate totam!
+						.row
+							.col-xl-12
+								hr
+						.row
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, a.
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, magni!
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, modi.
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, quasi!
+							.col-xl-1
+								.iconWrap
+									img(src="img/1.png", alt="")
+							.col-xl-3
+								.textWrap
+									h4 Header
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, laboriosam!
+				section#keep
+					.container
+						.row
+							.col-xl-11.offset-xl-1
+								.headWrap
+									h2 Keep in touch with us
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
+						form
+							.form-row
+								.col-xl-8.offset-xl-1
+									input(type="text" class="form-control" placeholder="Enter your email to update")
+								.col-xl-2
+									input(type="submit" class="form-control button-empty" value="submit")
+						.row
+							.offset-xl-4.col-xl-1
+								.icon-wrap
+									a(href="##")
+										i.fab.fa-facebook-square.fa-3x
+							.col-xl-1
+								.icon-wrap
+									a(href="##")
+										i.fab.fa-twitter-square.fa-3x
+							.col-xl-1
+								.icon-wrap
+									a(href="##")
+										i.fab.fa-google-plus-square.fa-3x
+							.col-xl-1
+								.icon-wrap
+									a(href="##")
+										i.fab.fa-pinterest-square.fa-3x
+						.row
+							.col-xl-12
+								hr
+			footer
+			script(src="libs/jquery/dist/jquery.js")
+			script(src="libs/owl.carousel/dist/owl.carousel.js")
+			script(src="js/main.js")

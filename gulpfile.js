@@ -8,6 +8,9 @@ const server = require('gulp-server-livereload');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
  
+
+
+ //>>>>>>>>>DEVELOPING TASKS 
 gulp.task('pug', function buildHTML() {
   return gulp.src('app/index.pug')
   .pipe(pug({
@@ -15,6 +18,15 @@ gulp.task('pug', function buildHTML() {
     pretty: true
   }))
   .pipe(gulp.dest('app/'))
+}); 
+
+gulp.task('pugDist', function buildHTML() {
+  return gulp.src('app/index.pug')
+  .pipe(pug({
+    doctype: 'html',
+    pretty: false
+  }))
+  .pipe(gulp.dest('dist/'))
 }); 
 
 // gulp.task('pug:watch', function () {
@@ -46,32 +58,59 @@ gulp.task('imagemin', () =>
         .pipe(gulp.dest('dist/img'))
 );
 
-gulp.task('cssmin', function () {
-    gulp.src('app/*.css')
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('app/css/'));
-});
 
-
-gulp.task('concatcss', function () {
+gulp.task('concatcss', ['sass'], function () {
   return gulp.src('app/css/*.css')
-    .pipe(concatCss("concat.css"))
+    .pipe(concatCss("styles.css"))
     .pipe(gulp.dest('dist/css/'));
 });
- 
 
 
-gulp.task('autoprefixer', () =>
-    gulp.src('app/main.css')
+gulp.task('autoprefixer', ['concatcss'], () =>
+    gulp.src('dist/css/styles.css')
         .pipe(autoprefixer({
-            browsers: ['last 4 versions'],
+            browsers: ['last 20 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('app/css/'))
+        .pipe(gulp.dest('dist/css/'))
 );
 
-gulp.task('default', ['server']);
+gulp.task('cssmin', ['autoprefixer'], function () {
+    gulp.src('dist/css/styles.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css/'));
+});
+
+
+gulp.task('concatVendorCss', function () {
+  return gulp.src([
+  'app/libs/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css',
+  'app/libs/bootstrap/dist/css/bootstrap.min.css',
+  'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
+  'app/libs/owl.carousel/dist/assets/owl.theme.default.min.css'])
+    .pipe(concatCss("vendor.css", {rebaseUrls: false}))
+    .pipe(gulp.dest('dist/css/'));
+
+});
+
+gulp.task('minVendorCss', ['concatVendorCss'], function(){
+  gulp.src('dist/css/vendor.css')
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('dist/css/'));
+})
+
+// _-_-_-BUILDING TASKS _-_-_-
+gulp.task('buildCSS', ['cssmin'], function(){
+  console.log('CSS was built')
+})
+gulp.task('buildVendorCSS', ['minVendorCss'], function(){
+  console.log('Vendor CSS was built')
+})
+
+
+gulp.task('default', ['imagemin', 'buildCSS', 'buildVendorCSS', 'pugDist']);
 
 
 

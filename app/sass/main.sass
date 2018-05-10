@@ -1,80 +1,70 @@
+@import 'mixins.sass'
+
 nav
 	width: 100%
 	padding-top: 60px
 	position: fixed
 	background-color: #fcdb00
 	z-index: 100
-	.container
-		.row
-			.col-3
-				.logo
-			div[class^='col']
-				.linkItem
-					padding: 15px 0
-					text-align: center
-					a
-						font-size: 22px
-						color: #000
-						font-weight: bold
-						transition: all .5s
-						&:hover
-							cursor: pointer
-							font-size: 25px
-							text-decoration: none
-			.col-1
-				.linkItem
-					text-align: right
+	.linkItem
+		padding: 15px 0
+		text-align: center
+		a
+			font-size: 22px
+			color: #000
+			font-weight: bold
+			transition: all .5s
+			&:hover
+				cursor: pointer
+				font-size: 25px
+				text-decoration: none
+			
 					
 					
 #main
-	padding-top: 165px
-	padding-bottom: 107px
-	background-color: #fcdb00
-	width: 100%
-	.container
-		.row
-			.col-5
-				.contentWrap
-					padding-top: 75px
-					h1
-						font-size: 32px
-						margin-bottom: 22px
-					h3
-						font-size: 20px
-						margin-bottom: 22px
-					p
-						font-size: 16px
-						margin-bottom: 29px
-					button
-						text-align: center
-						padding: 18px 28px
-						background-color: transparent
-						border-radius: 10px
-						color: #000
-						border: 2px black solid
-						outline: none
-						text-transform: uppercase
-						i
-							margin-left: 25px
-			.col-5
-				.imgWrap
-					text-align: center
+	+section(165px, 107px, #fcdb00)
+	.contentWrap
+		padding-top: 75px
+		h1
+			font-size: 32px
+			margin-bottom: 22px
+		h3
+			font-size: 20px
+			margin-bottom: 22px
+		p
+			font-size: 16px
+			margin-bottom: 29px
+		button
+			+button(transparent, #000, #fcdb00)
+			i
+				margin-left: 25px		
+	.imgWrap
+		text-align: center
 
 #features
-	padding-top: 118px
-	padding-bottom: 164px
-	.container
-		.row
-			.headWrap
-				text-align: center
-				h2
-					font-size: 32px
-				p
-					font-size: 20px
-		.row
-			div[class^="col"]
-				.iconWrap, .textWrap 
-					margin: 50px 0
+	+section(118px, 164px, #fff)
+	.headWrap
+		+headWrap(#000, #000)
+	.iconWrap, .textWrap 
+		margin: 50px 0
+#keep
+	+section(96px, 134px, #000)
+	form
+		margin: 40px 0 80px
+		.form-row
+			input:first-of-type::placeholder
+				color: #000
+				font-size: 16px
+	.headWrap
+		+headWrap(#fcdb00, #898989)
+	.icon-wrap
+		text-align: center
+		a
+			color: #fcdb00
+	hr
+		margin-top: 70px
+		background-color: #fff
+
 
 
 

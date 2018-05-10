@@ -4,59 +4,94 @@ nav {
   position: fixed;
   background-color: #fcdb00;
   z-index: 100; }
-  nav .container .row div[class^='col'] .linkItem {
+  nav .linkItem {
     padding: 15px 0;
     text-align: center; }
-    nav .container .row div[class^='col'] .linkItem a {
+    nav .linkItem a {
       font-size: 22px;
       color: #000;
       font-weight: bold;
       transition: all .5s; }
-      nav .container .row div[class^='col'] .linkItem a:hover {
+      nav .linkItem a:hover {
         cursor: pointer;
         font-size: 25px;
         text-decoration: none; }
-  nav .container .row .col-1 .linkItem {
-    text-align: right; }
 
 #main {
+  width: 100%;
   padding-top: 165px;
   padding-bottom: 107px;
-  background-color: #fcdb00;
-  width: 100%; }
-  #main .container .row .col-5 .contentWrap {
+  background-color: #fcdb00; }
+  #main .contentWrap {
     padding-top: 75px; }
-    #main .container .row .col-5 .contentWrap h1 {
+    #main .contentWrap h1 {
       font-size: 32px;
       margin-bottom: 22px; }
-    #main .container .row .col-5 .contentWrap h3 {
+    #main .contentWrap h3 {
       font-size: 20px;
       margin-bottom: 22px; }
-    #main .container .row .col-5 .contentWrap p {
+    #main .contentWrap p {
       font-size: 16px;
       margin-bottom: 29px; }
-    #main .container .row .col-5 .contentWrap button {
+    #main .contentWrap button {
       text-align: center;
       padding: 18px 28px;
       background-color: transparent;
       border-radius: 10px;
       color: #000;
-      border: 2px black solid;
+      border: 2px #000 solid;
       outline: none;
-      text-transform: uppercase; }
-      #main .container .row .col-5 .contentWrap button i {
+      text-transform: uppercase;
+      transition: all .5s; }
+      #main .contentWrap button:hover {
+        background-color: #000;
+        color: #fcdb00;
+        cursor: pointer; }
+      #main .contentWrap button i {
         margin-left: 25px; }
-  #main .container .row .col-5 .imgWrap {
+  #main .imgWrap {
     text-align: center; }
 
 #features {
+  width: 100%;
   padding-top: 118px;
-  padding-bottom: 164px; }
-  #features .container .row .headWrap {
+  padding-bottom: 164px;
+  background-color: #fff; }
+  #features .headWrap {
     text-align: center; }
-    #features .container .row .headWrap h2 {
-      font-size: 32px; }
-    #features .container .row .headWrap p {
-      font-size: 20px; }
-  #features .container .row div[class^="col"] .iconWrap, #features .container .row div[class^="col"] .textWrap {
+    #features .headWrap h2 {
+      font-size: 32px;
+      color: #000;
+      margin-bottom: 17px; }
+    #features .headWrap p {
+      font-size: 20px;
+      color: #000; }
+  #features .iconWrap, #features .textWrap {
     margin: 50px 0; }
+
+#keep {
+  width: 100%;
+  padding-top: 96px;
+  padding-bottom: 134px;
+  background-color: #000; }
+  #keep form {
+    margin: 40px 0 80px; }
+    #keep form .form-row input:first-of-type::placeholder {
+      color: #000;
+      font-size: 16px; }
+  #keep .headWrap {
+    text-align: center; }
+    #keep .headWrap h2 {
+      font-size: 32px;
+      color: #fcdb00;
+      margin-bottom: 17px; }
+    #keep .headWrap p {
+      font-size: 20px;
+      color: #898989; }
+  #keep .icon-wrap {
+    text-align: center; }
+    #keep .icon-wrap a {
+      color: #fcdb00; }
+  #keep hr {
+    margin-top: 70px;
+    background-color: #fff; }
